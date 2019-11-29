@@ -1,6 +1,6 @@
 package com.reactivetoolbox.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonGetter;
 import org.reactivetoolbox.core.lang.Option;
 import org.reactivetoolbox.core.lang.Result;
 import org.reactivetoolbox.core.lang.Tuple.Tuple2;
@@ -33,27 +33,27 @@ public class Account {
         this.lastTransfer = lastTransfer;
     }
 
-    @JsonProperty("id")
+    @JsonGetter("id")
     public Id id() {
         return id;
     }
 
-    @JsonProperty("userId")
+    @JsonGetter("userId")
     public User.Id userId() {
         return userId;
     }
 
-    @JsonProperty("currency")
+    @JsonGetter("currency")
     public Currency currency() {
         return currency;
     }
 
-    @JsonProperty("amount")
+    @JsonGetter("amount")
     public BigDecimal amount() {
         return amount;
     }
 
-    @JsonProperty("lastTransactionId")
+    @JsonGetter("lastTransactionId")
     public Option<Transfer.Id> lastTransfer() {
         return lastTransfer;
     }

@@ -1,5 +1,6 @@
 package com.reactivetoolbox.api.response;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.reactivetoolbox.domain.Operation;
 import org.reactivetoolbox.core.lang.Failure;
 import org.reactivetoolbox.core.lang.List;
@@ -16,10 +17,12 @@ public class HistoryResponse {
         this.status = status;
     }
 
+    @JsonGetter("operations")
     public List<Operation> operations() {
         return operations;
     }
 
+    @JsonGetter("status")
     public Status status() {
         return status;
     }

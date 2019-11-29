@@ -1,5 +1,6 @@
 package com.reactivetoolbox.domain;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import org.reactivetoolbox.core.lang.Option;
 import org.reactivetoolbox.core.lang.Tuple;
 import org.reactivetoolbox.core.lang.Tuple.Tuple2;
@@ -43,34 +44,42 @@ public class Operation {
         this.balance = balance;
     }
 
+    @JsonGetter("amount")
     public BigDecimal amount() {
         return amount;
     }
 
+    @JsonGetter("transferId")
     public Transfer.Id transferId() {
         return transferId;
     }
 
+    @JsonGetter("localAccountId")
     public Account.Id local() {
         return local;
     }
 
+    @JsonGetter("remoteAccountId")
     public Account.Id remote() {
         return remote;
     }
 
+    @JsonGetter("timestamp")
     public LocalDateTime timestamp() {
         return timestamp;
     }
 
+    @JsonGetter("previousTransferId")
     public Option<Transfer.Id> previousTransferId() {
         return previousId;
     }
 
+    @JsonGetter("currency")
     public Currency currency() {
         return currency;
     }
 
+    @JsonGetter("balance")
     public Option<BigDecimal> balance() {
         return balance;
     }

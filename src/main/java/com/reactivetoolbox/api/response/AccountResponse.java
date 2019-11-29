@@ -1,6 +1,6 @@
 package com.reactivetoolbox.api.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.reactivetoolbox.domain.Account;
 import org.reactivetoolbox.core.lang.Failure;
 import org.reactivetoolbox.core.lang.Option;
@@ -17,12 +17,12 @@ public class AccountResponse {
         this.status = status;
     }
 
-    @JsonProperty("account")
+    @JsonGetter("account")
     public Option<Account> account() {
         return account;
     }
 
-    @JsonProperty("status")
+    @JsonGetter("status")
     public Status status() {
         return status;
     }

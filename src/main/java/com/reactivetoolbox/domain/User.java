@@ -1,5 +1,6 @@
 package com.reactivetoolbox.domain;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import org.reactivetoolbox.core.lang.support.KSUID;
 
 import java.util.Objects;
@@ -14,10 +15,12 @@ public class User {
         this.details = details;
     }
 
+    @JsonGetter("id")
     public User.Id id() {
         return id;
     }
 
+    @JsonGetter("details")
     public UserDetails details() {
         return details;
     }

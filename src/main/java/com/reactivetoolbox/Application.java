@@ -93,8 +93,8 @@ public class Application {
 
                 app.path("/account", () -> {
                     app.post("/", application::createAccount);
-                    app.get("/{id}", application::getAccount);
-                    app.get("/{id}/history", application::getAccountHistory);
+                    app.get("/{accountId}", application::getAccount);
+                    app.get("/{accountId}/history", application::getAccountHistory);
                 });
 
                 app.post("/transfer", application::createTransfer);

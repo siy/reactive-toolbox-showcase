@@ -1,5 +1,7 @@
 package com.reactivetoolbox.domain;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+
 import java.util.Objects;
 import java.util.StringJoiner;
 
@@ -13,10 +15,12 @@ public class UserDetails {
         this.lastName = lastName;
     }
 
+    @JsonGetter("firstName")
     public String firstName() {
         return firstName;
     }
 
+    @JsonGetter("lastName")
     public String lastName() {
         return lastName;
     }
