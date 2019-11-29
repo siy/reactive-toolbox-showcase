@@ -1,0 +1,11 @@
+.DS_Store
+
+target
+pom.xml.releaseBackup
+release.properties
+
+.idea
+*.iws
+*.iml
+*.ipr
+*.log
