@@ -37,7 +37,7 @@
         <junit.version>5.4.0</junit.version>
         <junit.platform.version>1.4.0</junit.platform.version>
         <mockito.version>3.1.0</mockito.version>
-        <jooby.version>2.3.1</jooby.version>
+        <jooby.version>2.8.3</jooby.version>
         <logback.version>1.2.3</logback.version>
         <toolbox.version>reactive-toolbox-core-0.3.1</toolbox.version>
     </properties>
